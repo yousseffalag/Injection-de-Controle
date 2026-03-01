@@ -21,7 +21,7 @@ public class MetierImpl implements IMetier{
     }
 
     // Injecter l'attribut dao
-    void setDAO(IDao dao){
+    public void setDAO(IDao dao){
         this.dao = dao;
     }
 

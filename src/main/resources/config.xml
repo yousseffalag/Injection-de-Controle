@@ -6,9 +6,9 @@
            http://www.springframework.org/schema/beans
            https://www.springframework.org/schema/beans/spring-beans.xsd">
 
-       <bean id="d" class="net.enset.dao.DaoImpl"></bean>
+       <bean id="dao" class="net.enset.dao.DaoImpl"></bean>
        <bean id="metier" class="net.enset.metier.MetierImpl">
-           <property name="dao" ref="d"></property>
+           <constructor-arg ref="dao"/>
        </bean>
 
 </beans>

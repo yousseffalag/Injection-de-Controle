@@ -1,9 +1,14 @@
 package net.enset.metier;
 
 import net.enset.dao.IDao;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
 
+@Component
 public class MetierImpl implements IMetier{
 
+    @Autowired @Qualifier("d")
     private IDao dao; // couplage faible
 
 

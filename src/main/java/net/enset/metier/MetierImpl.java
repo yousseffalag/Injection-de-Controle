@@ -12,10 +12,17 @@ public class MetierImpl implements IMetier{
         this.dao = dao;
     }
 
+    public MetierImpl(){}
+
     @Override
     public double calcul(){
         double t = dao.getData();
         return t*43/3;
+    }
+
+    // Injecter l'attribut dao
+    void setDAO(IDao dao){
+        this.dao = dao;
     }
 
 }
